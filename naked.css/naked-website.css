@@ -1,0 +1,144 @@
+body {
+  background: white;
+  color: #222;
+}
+
+header {
+  background: #E9E9E9;
+  text-align: center;
+  color: white;
+  padding: 30px 0;
+}
+header h1 {
+  display: none;
+}
+
+.logo {
+  max-width: 100%;
+  width: 220px;
+}
+
+.tagline {
+  margin-top: 0;
+  display: block;
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 25px;
+  color: #AAA;
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn--download {
+  padding: 25px 50px;
+  font-size: 16px;
+}
+.action {
+  margin-bottom: 0;
+}
+.size {
+  margin-top: 10px;
+  display: block;
+  color: #AAA;
+  font-size: 13px;
+}
+.heart {
+  color: lightcoral;
+}
+.resume {
+  font-size: 18px;
+  text-align: center;
+}
+.section-title {
+  border-bottom: 1px solid #EEE;
+  padding-bottom: 5px;
+  font-weight: 300;
+  color: lightcoral;
+}
+.share {
+  text-align: center;
+}
+
+footer {
+  font-size: 13px;
+  color: #999;
+  text-align: center;
+  padding-bottom: 15px;
+}
+footer p {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+a {
+  color: #333;
+}
+a:hover {
+  text-decoration: none;
+}
+section {
+  margin-bottom: 20px;
+}
+code {
+  background: whitesmoke;
+  padding: 15px 20px;
+  display: block;
+}
+p {
+  line-height: 1.5;
+}
+.code {
+  background: #EEE;
+  display: inline-block;
+  color: lightcoral;
+  font-family: monospace;
+  padding: 1px 5px;
+}
+code, .code {
+  font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+}
+.alert {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: white;
+  background: lightcoral;
+  padding: 3px 7px;
+}
+
+@media (min-width: 768px) {
+  header {
+    padding: 120px 0;
+  }
+  .logo {
+    width: 360px;
+  }
+  .tagline {
+    font-size: 20px;
+  }
+  .content {
+    padding: 20px 0;
+  }
+  .resume {
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+  section {
+    margin-bottom: 30px;
+  }
+  code {
+    padding: 30px 40px;
+  }
+}
+
+@media (min-width: 992px) {
+  header {
+    padding: 160px 0;
+  }
+  .logo {
+    width: 480px;
+  }
+}
+
+@media (min-width: 1200px) {
+  header {
+    padding: 180px 0;
+  }
+}

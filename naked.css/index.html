@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>naked.css – super lightweight css framework</title>
+  <meta name="description" content="The simplest set of CSS classes to get your awesome lightweight css project on the way.">
+  <meta name="author" content="Bruno Cavalcante">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/naked.min.css" />
+  <link rel="stylesheet" href="css/atom-one-light.css" />
+  <link rel="stylesheet" href="naked-website.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>naked.css</h1>
+      <img class="logo" src="img/logo.svg" alt="naked.css" title="naked.css" />
+      <p class="tagline">
+        super lightweight css framework
+      </p>
+      <p class="action">
+        <a class="btn btn--large btn--download" href="https://raw.githubusercontent.com/brunocavalcante/naked.css/master/dist/naked.min.css">
+          Download v0.1
+        </a>
+        <small class="size">Only 5kb minified! <span class="heart">&hearts;</span></small>
+      </p>
+    </div>
+  </header>
+  
+  <div class="container content">
+    <p class="resume">
+      <b>naked.css</b> is a minimalistic css framework designed to get your awesome lightweight css project on the way.
+    </p>
+
+    <section class="share">
+      <a class="github-button" href="https://github.com/brunocavalcante/naked.css" data-icon="octicon-star" data-style="mega" data-count-href="/brunocavalcante/naked.css/stargazers" data-count-api="/repos/brunocavalcante/naked.css#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star brunocavalcante/naked.css on GitHub">Star</a>
+
+      <a class="github-button" href="https://github.com/brunocavalcante/naked.css/fork" data-icon="octicon-repo-forked" data-style="mega" data-count-href="/brunocavalcante/naked.css/network" data-count-api="/repos/brunocavalcante/naked.css#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork brunocavalcante/naked.css on GitHub">Fork</a>
+    </section>
+
+    <section>
+      <h2 class="section-title">Who was it built for</h2>
+      <p>
+        Certain projects demand a high performance – and you just can't afford to have a css framework with a lot of classes you won't ever use as they are. All these lines of code weigh in on the page, and end up compromising the overall performance and usability of your project.
+      </p>
+      <p>
+        In these cases, you may be better off writing your css code on top of something like the awesome <a href="https://necolas.github.io/normalize.css/">Normalize.css</a>. However, you may need some basic grid system, form styling, and some stuff like that. If that's your case, then <b>naked.css</b> was shared thinking of you. It's an attempt at the smallest set of css classes that the majority of projects might find useful – and nothing more.
+      </p>
+      <p>
+        It's just <b>5kb minified</b>, and if you gzip it you should have it at less than <b>2kb</b>.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="section-title">Container</h2>
+      <p>
+        Want to wrap content on a non-fluid responsive container? This is your guy: <span class="code">.container</span>.
+      </p>
+      <pre><code data-lang="html" class="html">&lt;div class="container"&gt;
+  These are not the droids you're looking for...
+&lt;/div&gt;</code></pre>
+    </section>
+
+    <section>
+      <h2 class="section-title">Grid</h2>
+      <p>
+        The grid is a 12-column fluid grid. You need to add the <span class="code">.grid__column</span> class, and then the respective modifier class. Example:
+      </p>
+     <pre><code data-lang="html" class="html">&lt;div class="grid"&gt;
+  &lt;div class="grid__column grid__column--6"&gt;
+    grid__column--6
+  &lt;/div&gt;
+  &lt;div class="grid__column grid__column--4"&gt;
+    grid__column--3
+  &lt;/div&gt;
+  &lt;div class="grid__column grid__column--2"&gt;
+    grid__column--2
+  &lt;/div&gt;
+  ...
+&lt;/div&gt;
+</code></pre>
+      <p>
+        <span class="alert">Important</span> Grid columns do not have any padding or margin. If you want to add some padding, you can add the classes <span class="code">.grid__column--leftpad</span> for some left padding, and <span class="code">.grid__column--rightpad</span> for right padding.
+      </p>
+      <p>
+        <span class="alert">Heads up!</span> The grid system only applies for tablet-like screens and above.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="section-title">Forms</h2>
+      <p>
+        Flat styled inputs. Example:
+      </p>
+      <form>
+        <div class="form__row grid">
+          <div class="form__column grid__column grid__column--6 grid__column--rightpad ">
+            <label>First Name</label>
+            <input type="text" value="Sherlock" />
+          </div>
+          <div class="form__column grid__column grid__column--6 grid__column--leftpad ">
+            <label>Last Name</label>
+            <input type="text" value="Holmes" />
+          </div>
+        </div>
+        <div class="form__row">
+          <label>Address</label>
+          <input type="text" value="221B Baker Street" />
+        </div>
+        <div class="form__actions">
+          <button type="submit" class="btn">Submit</button>
+        </div>
+      </form>
+      <pre><code data-lang="html" class="html">&lt;form&gt;
+  &lt;div class="form__row grid"&gt;
+    &lt;div class="form__column grid__column grid__column--6 grid__column--rightpad "&gt;
+      &lt;label&gt;First Name&lt;/label&gt;
+      &lt;input type="text" value="Sherlock" /&gt;
+    &lt;/div&gt;
+    &lt;div class="form__column grid__column grid__column--6 grid__column--leftpad "&gt;
+      &lt;label&gt;Last Name&lt;/label&gt;
+      &lt;input type="text" value="Holmes" /&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="form__row"&gt;
+    &lt;label&gt;Address&lt;/label&gt;
+    &lt;input type="text" value="221B Baker Street" /&gt;
+  &lt;/div&gt;
+  &lt;div class="form__actions"&gt;
+    &lt;button type="submit" class="btn"&gt;Submit&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+    </section>
+
+    <section>
+      <h2 class="section-title">Buttons</h2>
+      <p>
+        The <span class="code">.btn</span> class will get you a flat button. The following modifiers are available: 
+        <span class="code">.btn--success</span>, <span class="code">.btn--danger</span>, <span class="code">.btn--large</span>, 
+        <span class="code">.btn--small</span> and <span class="code">.btn--block</span>.
+      </p>
+      <p>Example:</p>
+      <p>
+        <button type="button" class="btn">
+          Default
+        </button>
+        <button type="button" class="btn btn--success">
+          Success
+        </button>
+        <button type="button" class="btn btn--danger">
+          Danger
+        </button>
+      </p>
+      <p>
+        <button type="button" class="btn btn--large">
+          Large
+        </button>
+        <button type="button" class="btn btn--small">
+          Small
+        </button>
+      </p>
+      <button type="button" class="btn btn--block">
+        Block
+      </button>
+    </section>
+
+    <section>
+      <h2 class="section-title">Contribute</h2>
+      <p>You are extremely welcome to help out with the project. Seriously. You can find the repo at <a href="http://github.com/brunocavalcante/naked.css">github.com/brunocavalcante/naked.css</a>.
+    </section>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>
+        <b>naked.css</b> is a project by <a href="http://twitter.com/bfcavalcante">Bruno Cavalcante</a>.
+      </p>
+      <p>
+        Licensed under the MIT License.
+      </p>
+      <p>
+        <span class="heart">&hearts;</span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+</html>
